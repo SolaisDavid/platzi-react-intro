@@ -1,8 +1,18 @@
 import React from "react";
+import '../styles/CreateTodoButton.css';
 
 function TodoCreateButton(props) {
+    const handleClick = () => {
+        alert('Add TODO');
+    }
+
     return (
-        <button>Create New TODO</button>
+        <button
+            className="CreateTodoButton"
+            onClick={handleClick}
+        >
+            +
+        </button>
     );
 }
 

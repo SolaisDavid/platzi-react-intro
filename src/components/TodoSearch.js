@@ -1,9 +1,21 @@
 import React from "react";
+import '../styles/TodoSearch.css';
 
-function TodoSearch(props) {
-    return (
-        <input className="todo-search" placeholder="Search for TODOS" />
-    );
+function TodoSearch({ query, setQuery }) {
+
+    const handleInputChange = (e) => {
+        setQuery(e.target.value);
+    };
+
+    return [
+        <input
+            key="todoSearch"
+            className="TodoSearch"
+            placeholder="Search for TODOS"
+            value={query}
+            onChange={handleInputChange}
+        />
+    ];
 }
 
 export { TodoSearch };
